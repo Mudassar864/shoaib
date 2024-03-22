@@ -1,0 +1,592 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2024 Mudassar
+ */
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+     * COLORS
+     */
+  --lightBlack: #262626;
+  --lightBlack-100: #1a1a1a;
+  --black: #fff;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  height: auto;
+}
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+input {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+body {
+  background-color: var(--white);
+  color: var(--lightBlack);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+/* components  */
+.large {
+  font-size: 2.6rem;
+  line-height: 3.3rem;
+}
+.medium {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.small {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 700;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 2px;
+}
+
+.heading {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.sub-heading {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.btn {
+  padding: 1.4rem 1.8rem;
+  background-color: var(--white);
+  color: var(--lightBlack-100);
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  transition: all 100ms ease-in-out;
+  max-width: max-content;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1680px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 70px;
+}
+/* header  */
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  color: var(--white);
+  transition: all 200ms ease-in-out;
+  z-index: 1000;
+}
+.header .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0.9rem;
+}
+.header .topbar .links {
+  display: flex;
+  gap: 2rem;
+}
+.header .topbar .links .link-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header .topbar .logo {
+  text-align: center;
+}
+.header .topbar .logo span {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.header .topbar .logo p {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  line-height: 1.5rem;
+}
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-block: 1rem;
+  text-transform: uppercase;
+}
+.header:hover {
+  background-color: var(--white);
+  color: var(--lightBlack-100);
+}
+.header:hover .navbar {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.header:hover .btn {
+  background-color: var(--lightBlack);
+  color: var(--white);
+}
+.header:hover .btn:hover {
+  background-color: var(--white);
+  color: var(--lightBlack-100);
+  border: 1px solid var(--lightBlack-100);
+}
+.header .links .black {
+  display: none;
+}
+.header:hover .links .black {
+  display: block;
+}
+.header:hover .links .white {
+  display: none;
+}
+
+/* banner  */
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.bg-image {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 500px;
+}
+.banner .content h1 {
+  color: var(--white);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.6rem;
+  line-height: 3.3rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+.banner .content p {
+  color: var(--white);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.banner .content .btn {
+  background-color: #1a1a1a;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  padding: 1.5rem 3rem;
+  border: none;
+  color: var(--white);
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.banner .content .btn:hover {
+  background-color: #666;
+}
+
+/* projects  */
+
+.projects .top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 850px;
+  margin-inline: auto;
+  margin-bottom: 70px;
+}
+.projects .top h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.projects .top p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.projects .boxes {
+  display: flex;
+  gap: 2rem;
+}
+.projects .boxes .box {
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.projects .boxes .box .img {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+.projects .boxes .box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects .boxes .box .content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.projects .boxes .box .content h3 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.projects .boxes .box .content p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.projects .boxes .box .content .btn-secondary {
+  max-width: max-content;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  position: relative;
+}
+
+.projects .boxes .box .content .btn-secondary::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 1px;
+  background-color: var(--lightBlack-100);
+  transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.projects .boxes .box .content .btn-secondary:hover::before {
+  width: 100%;
+}
+
+/* about section  */
+.about {
+  background-color: #f7f7f7;
+}
+.about .container {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  gap: 4rem;
+}
+.about .about-img {
+  flex: 2;
+  height: 600px;
+}
+.about .about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.about .about-content {
+  flex: 1;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid var(--lightBlack-100);
+  padding: 2rem;
+}
+.about .about-content h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 2px;
+}
+.about .about-content p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.about .about-content .about-btn {
+  padding: 1.5rem 4rem;
+  background-color: transparent;
+  color: var(--lightBlack-100);
+  text-transform: uppercase;
+  border: 1px solid var(--lightBlack-100);
+  transition: all 100ms ease-in-out;
+  max-width: max-content;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.about .about-content .about-btn:hover {
+  background-color: var(--lightBlack-100);
+  color: var(--white);
+}
+.services .container {
+  max-width: 1080px;
+  height: 800px;
+  display: flex;
+  gap: 4rem;
+}
+.services .container .left {
+  flex: 1.8;
+  height: 100%;
+  overflow: hidden;
+}
+.services .container .right {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.services .container .left h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.services .container .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.services .container .right img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.services .container .right p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--lightBlack-100);
+}
+.services .container .right .services-btn {
+  padding: 1.5rem 4rem;
+  background-color: transparent;
+  color: var(--lightBlack-100);
+  text-transform: uppercase;
+  border: 1px solid var(--lightBlack-100);
+  transition: all 100ms ease-in-out;
+  max-width: max-content;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.services .container .right .services-btn:hover {
+  background-color: var(--lightBlack-100);
+  color: var(--white);
+}
+.featured {
+  width: 100%;
+  height: 150vh;
+  background-image: url("./assets/banner.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.featured .featured-content {
+  max-width: 1400px;
+  height: 700px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding-top: 8rem;
+  gap: 3rem;
+}
+.featured .featured-img {
+  flex: 2;
+  height: 100%;
+}
+.featured .featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featured .content {
+  flex: 1;
+  text-align: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.featured .content h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.featured .content p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--lightBlack-100);
+}
+.featured .content .featured-btn {
+  padding: 1.5rem 4rem;
+  background-color: transparent;
+  color: var(--lightBlack-100);
+  text-transform: uppercase;
+  border: 1px solid var(--lightBlack-100);
+  transition: all 100ms ease-in-out;
+  max-width: max-content;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.featured .content .featured-btn:hover {
+  background-color: var(--lightBlack-100);
+  color: var(--white);
+}
+.achievements .section-heading {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.achievements h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.achievements p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--lightBlack-100);
+}
+.achievements .boxes{
+  max-width: 991px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.achievements .box{
+  border-left: 1px solid var(--lightBlack-100);
+  padding-left: 0.5rem;
+}
+.achievements .boxes span{
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.footer{
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
