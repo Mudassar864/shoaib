@@ -217,25 +217,24 @@ body {
   align-items: center;
   position: relative;
 }
-.bg-image {
-  width: 100%;
-  height: 100vh;
+#myVideo {
   position: absolute;
-  top: 0;
-  left: 0;
   right: 0;
-  z-index: -1;
-}
-.bg-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 .banner .content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 500px;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
 }
 .banner .content h1 {
   color: var(--white);
@@ -564,18 +563,18 @@ body {
   letter-spacing: 2px;
   color: var(--lightBlack-100);
 }
-.achievements .boxes{
+.achievements .boxes {
   max-width: 991px;
   margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.achievements .box{
+.achievements .box {
   border-left: 1px solid var(--lightBlack-100);
   padding-left: 0.5rem;
 }
-.achievements .boxes span{
+.achievements .boxes span {
   font-size: 2.6rem;
   line-height: 3rem;
   font-family: "Times New Roman", Times, serif;
@@ -584,8 +583,7 @@ body {
   text-transform: uppercase;
 }
 
-
-.footer{
+.footer {
   width: 100%;
   height: 100vh;
   background-color: red;
