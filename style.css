@@ -698,14 +698,15 @@ body {
   }
   .featured .featured-content {
     all: unset;
-    max-width: 660px;
+    width: 70%;
+    height: 40%;
     position: absolute;
     left: 0;
     bottom: 0;
     display: grid;
+    padding-block: 8rem;
     background-color: var(--white);
-    padding: 4rem;
-    gap: 3rem;
+      gap: 3rem;
   }
   .footer .footer-bottom .container {
     grid-template-columns: repeat(3, 1fr);
@@ -728,6 +729,11 @@ body {
   .container {
     max-width: 960px;
   }
+  .services .container{
+    max-width: 800px;
+    grid-template-columns: 2.5fr 1.5fr;
+    gap: 10rem;
+  }
   .btn{
     padding: 1.5rem 3rem;
   }
@@ -736,11 +742,13 @@ body {
   .container {
     max-width: 1160px;
   }
+  .services .container{
+    max-width: 1000px;
+  }
   .projects .boxes {
     grid-template-columns: repeat(3, 1fr);
   }
   .featured .featured-content {
-    max-width: 1000px;
     grid-template-columns: 2fr 1fr;
   }
   .footer .footer-bottom .container {
@@ -752,9 +760,15 @@ body {
   .container {
     max-width: 1500px;
   }
+  .services .container{
+    max-width:1000px;
+  }
 }
 @media (min-width: 1980) {
   .container {
     max-width: 1900px;
+  }
+  .services .container{
+    max-width: 1000px;
   }
 }
